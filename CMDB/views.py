@@ -22,6 +22,7 @@ def login(request):
 
             try:
                 user = models.User.objects.get(name=username)
+
             except :
                 message = '用户不存在！'
                 return render(request, 'CMDB/login.html', locals())
